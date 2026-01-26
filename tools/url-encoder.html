@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>URL Encoder / Decoder – Encode & Decode URLs Online | ToolZen</title>
+  <meta name="description" content="Free online URL Encoder and Decoder tool to encode or decode URLs instantly. Simple, fast and secure – ToolZen.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    .tool-container {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    .tool-container h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .tool-container p {
+      text-align: center;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 140px;
+      margin-top: 20px;
+      padding: 14px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .btn-group button {
+      flex: 1;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      background: #0f172a;
+      color: #fff;
+    }
+
+    .btn-group button:hover {
+      background: #1e293b;
+    }
+
+    .utility-buttons {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .utility-buttons button {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background: #f1f5f9;
+      cursor: pointer;
+    }
+
+    .utility-buttons button:hover {
+      background: #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>ToolZen</h1>
+    <p>Simple. Fast. Free Online Tools.</p>
+  </header>
+
+  <!-- Tool -->
+  <div class="tool-container">
+    <h2>URL Encoder / Decoder</h2>
+    <p>Encode or decode URLs instantly using this free online tool.</p>
+
+    <textarea id="inputText" placeholder="Enter URL or text here..."></textarea>
+
+    <div class="btn-group">
+      <button onclick="encodeURL()">Encode</button>
+      <button onclick="decodeURL()">Decode</button>
+    </div>
+
+    <div class="utility-buttons">
+      <button onclick="copyText()">Copy</button>
+      <button onclick="clearText()">Clear</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 ToolZen – Free Online Utility Tools</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const inputText = document.getElementById("inputText");
+
+    function encodeURL() {
+      try {
+        inputText.value = encodeURIComponent(inputText.value);
+      } catch (e) {
+        alert("Invalid input!");
+      }
+    }
+
+    function decodeURL() {
+      try {
+        inputText.value = decodeURIComponent(inputText.value);
+      } catch (e) {
+        alert("Invalid encoded URL!");
+      }
+    }
+
+    function copyText() {
+      inputText.select();
+      document.execCommand("copy");
+      alert("Copied to clipboard!");
+    }
+
+    function clearText() {
+      inputText.value = "";
+    }
+  </script>
+
+</body>
+</html>
