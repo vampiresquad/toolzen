@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Counter – Count Words & Characters Online | ToolZen</title>
+  <meta name="description" content="Free online Word Counter tool to count words, characters, sentences and paragraphs instantly. Powered by ToolZen.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    .tool-container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    .tool-container h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .tool-container p {
+      text-align: center;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 180px;
+      margin-top: 20px;
+      padding: 15px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .stat-box {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .stat-box h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #0f172a;
+    }
+
+    .stat-box span {
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    .utility-buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .utility-buttons button {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background: #f1f5f9;
+      cursor: pointer;
+    }
+
+    .utility-buttons button:hover {
+      background: #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>ToolZen</h1>
+    <p>Simple. Fast. Free Online Tools.</p>
+  </header>
+
+  <!-- Tool -->
+  <div class="tool-container">
+    <h2>Word Counter</h2>
+    <p>Count words, characters, sentences and paragraphs instantly.</p>
+
+    <textarea id="textInput" placeholder="Start typing or paste your text here..." oninput="countText()"></textarea>
+
+    <div class="stats">
+      <div class="stat-box">
+        <h3 id="wordCount">0</h3>
+        <span>Words</span>
+      </div>
+      <div class="stat-box">
+        <h3 id="charCount">0</h3>
+        <span>Characters</span>
+      </div>
+      <div class="stat-box">
+        <h3 id="sentenceCount">0</h3>
+        <span>Sentences</span>
+      </div>
+      <div class="stat-box">
+        <h3 id="paragraphCount">0</h3>
+        <span>Paragraphs</span>
+      </div>
+    </div>
+
+    <div class="utility-buttons">
+      <button onclick="clearText()">Clear</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 ToolZen – Free Online Utility Tools</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const textInput = document.getElementById("textInput");
+    const wordCount = document.getElementById("wordCount");
+    const charCount = document.getElementById("charCount");
+    const sentenceCount = document.getElementById("sentenceCount");
+    const paragraphCount = document.getElementById("paragraphCount");
+
+    function countText() {
+      const text = textInput.value.trim();
+
+      // Characters
+      charCount.innerText = textInput.value.length;
+
+      // Words
+      const words = text ? text.split(/\s+/).filter(Boolean) : [];
+      wordCount.innerText = words.length;
+
+      // Sentences
+      const sentences = text ? text.split(/[.!?]+/).filter(s => s.trim().length > 0) : [];
+      sentenceCount.innerText = sentences.length;
+
+      // Paragraphs
+      const paragraphs = text ? text.split(/\n+/).filter(p => p.trim().length > 0) : [];
+      paragraphCount.innerText = paragraphs.length;
+    }
+
+    function clearText() {
+      textInput.value = "";
+      countText();
+    }
+  </script>
+
+</body>
+</html>
