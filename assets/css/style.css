@@ -56,3 +56,11 @@ body {
   font-size: 0.9rem;
   color: #666;
 }
+.seo-text {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
