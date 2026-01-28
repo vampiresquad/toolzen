@@ -1,34 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Home -->
   <url>
     <loc>https://vampiresquad.github.io/toolzen/</loc>
-    <priority>1.0</priority>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
   </url>
 
+  <!-- Tools -->
   <url>
     <loc>https://vampiresquad.github.io/toolzen/tools/text-case.html</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://vampiresquad.github.io/toolzen/tools/word-counter.html</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://vampiresquad.github.io/toolzen/tools/password-checker.html</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://vampiresquad.github.io/toolzen/tools/hash-generator.html</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://vampiresquad.github.io/toolzen/tools/url-encoder.html</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://vampiresquad.github.io/toolzen/privacy-policy.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
+    <loc>https://vampiresquad.github.io/toolzen/terms.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
+    <loc>https://vampiresquad.github.io/toolzen/disclaimer.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://vampiresquad.github.io/toolzen/contact.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
   </url>
 
 </urlset>
